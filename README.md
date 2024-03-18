@@ -27,9 +27,6 @@ MMRMMRMRRM
 ### Output 
 The output for each rover should be its final co-ordinates and heading.
 
-Use the `input.text` file to enter input data, and `output.txt` to view the output data.
-It is interesting to clean the files referring to previous data first.
-
 #### Example 
 
 ```
@@ -37,6 +34,9 @@ It is interesting to clean the files referring to previous data first.
 5 1 E
 ```
 
+
+_Use the `input.text` file to enter input data, and `output.txt` to view the output data.
+It is interesting to clean the files referring to previous data first._
 ---
 
 ## Running application
