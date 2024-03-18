@@ -16,5 +16,5 @@ end
 
 end_position_data.each { |end_position| puts end_position }
 
-output_file = File.new("output.txt", "w")
+output_file = File.new('output.txt', 'w')
 output_file.write(end_position_data.join("\n"))

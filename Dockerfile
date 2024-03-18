@@ -12,6 +12,8 @@ WORKDIR $INSTALL_PATH
 # Copy Gemfile for container
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
+COPY input.txt /app/input.txt
+COPY output.txt /app/output.txt
 
 # Copy app code for container
 COPY . .

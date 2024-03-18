@@ -51,7 +51,7 @@ ruby processor.rb
 
 ```shell
 docker build -t rovers_control_app .
-docker run --rm rovers_control_app 
+docker run --rm -it -v $(pwd):/app rovers_control_app 
 ```
 
 ## Running tests
