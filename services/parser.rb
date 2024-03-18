@@ -1,14 +1,12 @@
 # frozen_string_literal: true
 
-class Parser
+require_relative 'aplication_service'
+
+class Parser < ApplicationService
   attr_reader :file
 
   def initialize(file)
     @file = file
-  end
-
-  def self.call(*args)
-    new(*args).call
   end
 
   def call
@@ -31,7 +29,7 @@ class Parser
     instructions = []
 
     instruction_data.each_slice(2) do |position, commands|
-      instructions << { initial_position: position, commands: commands }
+      instructions << { starting_position: position, commands: commands }
     end
 
     instructions
