@@ -3,8 +3,8 @@
 require_relative 'services/parser'
 require_relative 'services/movement'
 
-file = File.open('input.txt')
-exploration_data = Parser.call(file)
+input_file = File.open('input.txt')
+exploration_data = Parser.call(input_file)
 end_position_data = []
 
 exploration_data[:instructions].each do |instructions|
@@ -16,4 +16,5 @@ end
 
 end_position_data.each { |end_position| puts end_position }
 
-File.write("output.txt", end_position_data.join("\n"), mode: "a")
+output_file = File.new("output.txt", "w")
+output_file.write(end_position_data.join("\n"))
