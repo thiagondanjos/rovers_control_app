@@ -1,0 +1,6 @@
+/.git
+/.bundle
+.idea/
+.vscode/*
+.tool-versions
+.DS_Store
