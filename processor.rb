@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'pry'
 require_relative 'services/parser'
 require_relative 'services/movement'
 
@@ -15,4 +14,6 @@ exploration_data[:instructions].each do |instructions|
   end_position_data << Movement.call(starting_position, commands)
 end
 
-puts end_position_data
+end_position_data.each { |end_position| puts end_position }
+
+File.write("output.txt", end_position_data.join("\n"), mode: "a")
